@@ -1,0 +1,119 @@
+$blue: #000055
+$dark-blue: #00003D
+$magenta: #ff267e
+$grey: #EDEDED
+$green: #05C489
+$green-hover: #05b37c
+
+
+$font-suisse-med: SuisseIntl-Medium, sans-serif // 500 //
+$font-suisse-reg: SuisseIntl-Regular, sans-serif // 400 //
+$font-wulkan: WulkanDisplay, sans-serif
+
+
+body
+  img
+    max-width: 100%
+    height: auto
+
+.wrapper
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  height: 100%
+  display: flex
+.banner
+  width: 50%
+  height: 100vh
+  height: calc(var(--vh, 1vh) * 100)
+  background: $blue
+  position: relative
+  overflow: hidden
+  cursor: default
+  background: $blue url("../img/bg.jpg") no-repeat 50% 0/cover
+  padding: 70px 0 0 0
+  &__container
+    display: flex
+    flex-direction: column
+    padding: 0 15px
+
+  &__title
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-self: center
+    flex: 1 1 auto
+    &-promo
+      font-family: $font-suisse-med
+      font-size: 32px
+      line-height: 42px
+      text-transform: uppercase
+      color: $blue
+      display: inline-block
+      padding: 6px 16px 4px
+      background: $magenta
+      border-radius: 200px
+      align-self: flex-start
+      margin: 0 0 25px 0
+    &-welcom
+      font-family: $font-suisse-med
+      font-size: 56px
+      line-height: 56px
+      color: $grey
+      margin: 0 0 5.5px 0
+      text-transform: uppercase
+    &-bonus
+      font-family: $font-suisse-med
+      font-size: 174px
+      line-height: 174px
+      text-transform: uppercase
+      margin: 0 0 35px 0
+      color: $grey
+    &-spin
+      font-family: $font-suisse-med
+      display: inline-block
+      padding: 9px 32px 7px
+      font-size: 62px
+      line-height: 80px
+      background: $magenta
+      color: $blue
+      align-self: flex-start
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        width: 65px
+        height: 55px
+        background: url("../img/plus.svg") no-repeat 0 0/contain
+        top: -25px
+        left: -28px
+
+  &__pers
+    bottom: 24px
+    display: flex
+    justify-content: center
+    img
+      height: 62vh
+      position: absolute
+      bottom: 0
+  &__text
+    position: absolute
+    bottom: 45px
+    left: 45px
+    font-family: $font-suisse-reg
+    font-size: 14px
+    line-height: 18px
+    color: #ffffff
+    span
+      font-size: 12px
+      line-height: 15.5px
+
+
+
+
+
+
+@media screen and (max-width: 1023px)
+  .wrapper
+    display: none
+  .Layout_column__3MM83
+    width: 100%
